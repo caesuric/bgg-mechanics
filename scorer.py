@@ -30,7 +30,7 @@ def main():
                                 all_mechanics[mechanic.text] = game_rating
                             else:
                                 all_mechanics[mechanic.text] += game_rating
-        print_mechanics(all_mechanics)
+    print_mechanics(all_mechanics)
 
 def print_mechanics(mechanics):
     list_format =[k + ': ' + str(v) for k, v in sorted(mechanics.items(), reverse=True, key=lambda item: item[1])]
