@@ -7,6 +7,7 @@ def main():
     all_mechanics = {}
     folder = os.path.join('.', 'data')
     for i in range(config.max_game):
+        print (f'{round(i/config.max_game * 100, 2)}% done')
         filename = os.path.join(folder, f'game{i}.xml')
         if os.path.isfile(filename):
             xml_tree = ET.parse(filename)
