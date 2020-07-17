@@ -11,7 +11,7 @@ def main():
         'bayes_rating': float
     }
     headers = []
-    with open('all_data.csv') as data:
+    with open('mechanics_data.csv') as data:
         csvreader = csv.reader(data)
         for row in csvreader:
             header = row
@@ -20,7 +20,7 @@ def main():
                     dtypes[entry] = bool
                     headers.append(entry)
             break
-    data = pandas.read_csv('all_data.csv', dtype=dtypes)
+    data = pandas.read_csv('mechanics_data.csv', dtype=dtypes)
     columns = []
     for i in range(182):
         columns.append('bayes_rating')
